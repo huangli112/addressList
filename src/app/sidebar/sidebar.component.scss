@@ -1,0 +1,29 @@
+.sidebar{
+    float:left;
+    width: 320px;
+    height:869px;
+    border:1px solid #eceaea;
+
+}
+a{
+    display: block;
+    margin-left: 20px;
+    color:#428bca;
+}
+ul{
+    margin-top: 20px;
+}
+li{
+    width: 100%;
+    height:40px;
+    line-height:40px;
+}
+.active{
+    width: 100%;
+    height:40px;
+    background-color:#428bca;
+}
+.active a{
+   
+    color:#fff;
+}
