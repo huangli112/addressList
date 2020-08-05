@@ -1,0 +1,16 @@
+{
+  "id": "1987202",
+  "name": "addressList",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8777603",
+      "name": "show_more",
+      "font_class": "icon-test",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    }
+  ]
+}

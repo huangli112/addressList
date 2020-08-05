@@ -1,0 +1,107 @@
+table {
+    width: 100%;
+    margin-top: 40px;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  a{
+     color:#23527c; 
+     padding: 0 5px;
+  }
+  td,
+  th {
+    padding: 0;
+  }
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 76%;
+    padding: 40px 0 0 40px;
+    height: 869px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .sub-header {
+    width: 100%;
+    height: 44px;
+    line-height: 33px;
+    margin: 0;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #eceaea;
+    color: #333;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .table-responsive {
+    padding-top: 10px;
+    width: 100%;
+  }
+  .dropdown-toggle {
+    float: left;
+  }
+  .add-linker {
+    float: right;
+  }
+  .dropdown-toggle,
+  .add-linker {
+    padding: 0 20px;
+    line-height: 40px;
+    background-color: #31b0d5;
+    border: 1px solid #eceaea;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+  }
+  .add-linker {
+    background-color: #449d44;
+  }
+  
+  .pure-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+   
+  }
+  
+  .pure-table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  .pure-table td,
+  .pure-table th {
+      border-bottom: 1px solid #cbcbcb;
+    font-size: 14px;
+    margin: 0;
+    overflow: visible;
+    padding: 0.5em 1em;
+  }
+  .pure-table th{
+      font-weight: 700;
+      border-bottom: 2px solid #cbcbcb;
+  }
+  .pure-table thead {
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+  }
+  
+  .pure-table td {
+    background-color: transparent;
+  }
+  .label-friends,.label-family,.label-work{
+      width: 114px;
+      height: 20px;
+      padding:3px 8px;
+      line-height:20px;
+      font-size:14px;
+      color:#000;
+      text-align: center;
+      border: 1px solid transparent;
+      border-radius: 5px;
+  }
+ 
