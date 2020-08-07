@@ -1,32 +1,35 @@
 <div class="container">
-  <form class="form-signin" action="index.html">
+  <form class="form-signin"   #submitForm="ngForm" >
     <h2 class="signin-heading">Please sign up</h2>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus name="email" required pattern="^[a-z0-9A-Z]+[- | a-z0-9A-Z . _]+@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-z]{2,}$"
-      [(ngModel)]="signupForm.email" #email="ngModel" >
-
-    <div [hidden]="email.valid || email.prestine" class="warn">
-      <div *ngIf="email.errors.required">
-         请输入邮箱
-       </div>
-       <div *ngIf="email.errors.pattern">
-           邮箱格式不符合规范
-       </div>
-    </div>
-    <!-- 当email是有效的并且没有被碰过的 就隐藏 -->
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required maxlength="12" minlength="6"
-      [(ngModel)]="signupForm.password" #password="ngModel">
-    <div 
-    [hidden]="password.valid||email.prestine" 
-    class="warn">
-    <div *ngIf="password.errors.required">
-     请输入密码
-    </div>
-    <div *ngIf="password.errors.minlength">
-      密码长度至少为6位
-    </div>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus name="email" required
+      email="true" [(ngModel)]="signupForm.email" #email="ngModel">
+      <div *ngIf="!(email.valid || email.prestine)" class="warn">
+        <div *ngIf="email.errors?.required">
+          请输入邮箱
+        </div>
+        <div *ngIf="email.errors?.email">
+          邮箱格式不符合规范
+        </div>
+      </div>
    
-  </div>
-    <button class="form-sign" type="submit">Sign up</button>
+    <!-- 当email是有效的并且没有被碰过的 就隐藏 -->
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required
+      maxlength="12" minlength="6" [(ngModel)]="signupForm.password" #password="ngModel">
+      <div *ngIf="!(password.valid||email.prestine)" class="warn">
+        <div *ngIf="password.errors?.required">
+          请输入密码
+        </div>
+        <div *ngIf="password.errors?.minlength">
+          密码长度至少为6位
+        </div>
+      </div>
+    
+    <!-- 如果验证表单不通过则按钮被禁用 不允许提交 -->
+    <button 
+    class="form-sign" 
+    type="submit" 
+    (click)="signup()"
+    [disabled]="!submitForm.form.valid">Sign up</button> 
   </form>
   <p class="info"><a href="signup.html">Don't have an account? Create one here.</a></p>
 </div>
